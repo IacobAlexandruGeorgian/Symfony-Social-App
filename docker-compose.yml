@@ -1,15 +1,34 @@
 version: "3.8"
+
 services:
+  php:
+    image: php:8.2-cli
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: php -S 0.0.0.0:8000 -t public
+    ports:
+      - 8000:8000
+    depends_on:
+      - mysql
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      DATABASE_URL: "mysql://root:root@mysql:3306/symf6-hands-on"
+    # 👇 Install pdo_mysql for MySQL support
+    build:
+      context: .
+      dockerfile: Dockerfile
+
   mysql:
     image: mariadb:10.8.3
-    # Uncomment below when on Mac M1
-    # platform: linux/arm64/v8
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports:
       - 3307:3306
+
   adminer:
     image: adminer
     restart: always
