@@ -12,7 +12,7 @@
     - All relations you can find in a database (one to one, onte to many, many to many)
     - Actions type CRUD (using the best practices in Symfony / MVC)
     - Twig (forms, global components)
-    - File storage, sending emails (using the best practice)
+    - File storage, sending emails
     - Services, Dependency Injection, Builder Query
 
 ![image](https://github.com/user-attachments/assets/b1a99a7e-f084-476e-9f8e-cc92f5e67166)
