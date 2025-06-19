@@ -11,7 +11,7 @@
     - Authentification (Register / Login + roles + voters)
     - All relations you can find in a database (one to one, onte to many, many to many)
     - Actions type CRUD (using the best practices in Symfony / MVC)
-    - Twig (forms, global components)
+    - Twig (forms, global components, form builder)
     - File storage, sending emails
     - Services, Dependency Injection, Builder Query
 
