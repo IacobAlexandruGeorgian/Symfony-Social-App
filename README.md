@@ -9,7 +9,7 @@
 
     The project contains:
     - Authentification (Register / Login + policies)
-    - All relations you can find in a database (one to one, onte to many, many to many, polymorphism)
+    - All relations you can find in a database (one to one, onte to many, many to many)
     - Actions type CRUD (using the best practices in Symfony / MVC)
     - Twig (forms, global components)
     - File storage, sending emails (using the best practice)
